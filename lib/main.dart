@@ -13,23 +13,14 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           alignment: Alignment.center,
-          child: RichText(
-            text: TextSpan(
-              text: "Hello, ", // default text color is white
-              style: DefaultTextStyle.of(context).style, // get default style from current context, text color is white
-              children: <TextSpan>[
-                TextSpan(
-                  text: "CUBETIQ ",
-                  style: TextStyle(
-                    color: Colors.blueAccent,
-                    fontWeight: FontWeight.bold
-                  )
-                ),
-                TextSpan(
-                  text: "Solution!", // default text color is white from default context
-                )
-              ]
-            )
+          child: Padding(
+            padding: EdgeInsets.all(20.0),
+            child: TextField(
+              decoration: InputDecoration(
+                border: InputBorder.none, // remove default input border
+                hintText: "Enter your name" // placeholder of input
+              ),
+            ),
           )
         ),
       ),
