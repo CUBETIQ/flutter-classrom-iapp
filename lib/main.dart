@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           alignment: Alignment.center,
-          child: const Text.rich( // As the same RichText class
-            TextSpan(
-              text: "Hello, ", // default text style
-              children: <TextSpan>[ // list children of TextSpan
+          child: RichText(
+            text: TextSpan(
+              text: "Hello, ", // default text color is white
+              style: DefaultTextStyle.of(context).style, // get default style from current context, text color is white
+              children: <TextSpan>[
                 TextSpan(
                   text: "CUBETIQ ",
                   style: TextStyle(
@@ -25,11 +26,7 @@ class MyApp extends StatelessWidget {
                   )
                 ),
                 TextSpan(
-                  text: "Solution!",
-                  style: TextStyle(
-                    color: Colors.lightGreen,
-                    fontStyle: FontStyle.italic
-                  )
+                  text: "Solution!", // default text color is white from default context
                 )
               ]
             )
