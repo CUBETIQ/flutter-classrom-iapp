@@ -13,13 +13,15 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           alignment: Alignment.center,
-          child: Padding(
-            padding: EdgeInsets.all(20.0),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none, // remove default input border
-                hintText: "Enter your name" // placeholder of input
-              ),
+          child: Center( // we can't use const Center(...), because the widgets have dynamic widgets.
+            child: RaisedButton(
+              child: const Text("Click here", style: TextStyle(color: Colors.white)),
+              color: Theme.of(context).accentColor, // get default theme color of current context
+              elevation: 5.0, // Button shadow. If it bigger, it will be big shadow too.
+              splashColor: Colors.blueGrey,
+              onPressed: () => {
+                // handle action
+              },
             ),
           )
         ),
