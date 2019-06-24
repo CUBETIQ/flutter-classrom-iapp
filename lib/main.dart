@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         body: Container(
           alignment: Alignment.center,
           child: const Text(
-            "Hello, CUBETIQ!",
+            "Hello, CUBETIQ Solution!",
             textAlign: TextAlign.center, // if the alignment is center, it's useless.
             overflow: TextOverflow.ellipsis, // Shrink the words, example: hellolooooooo => hello.....
             style: TextStyle(
