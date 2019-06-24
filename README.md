@@ -1,6 +1,6 @@
-# iapp
+# iApp Work for CUBETIQ Solution, Flutter Classroom
 
-A new Flutter project.
+A new Flutter Classroom project.
 
 ## Getting Started
 
