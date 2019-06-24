@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           alignment: Alignment.center,
-          child: const Text.rich( // As the same RichText
+          child: const Text.rich( // As the same RichText class
             TextSpan(
               text: "Hello, ", // default text style
               children: <TextSpan>[ // list children of TextSpan
