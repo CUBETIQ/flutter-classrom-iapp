@@ -13,17 +13,27 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           alignment: Alignment.center,
-          child: const Text(
-            "Hello, CUBETIQ Solution!",
-            textAlign: TextAlign.center, // if the alignment is center, it's useless.
-            overflow: TextOverflow.ellipsis, // Shrink the words, example: hellolooooooo => hello.....
-            style: TextStyle(
-              color: Colors.blueAccent,
-              fontSize: 20.0,
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+          child: const Text.rich( // As the same RichText
+            TextSpan(
+              text: "Hello, ", // default text style
+              children: <TextSpan>[ // list children of TextSpan
+                TextSpan(
+                  text: "CUBETIQ ",
+                  style: TextStyle(
+                    color: Colors.blueAccent,
+                    fontWeight: FontWeight.bold
+                  )
+                ),
+                TextSpan(
+                  text: "Solution!",
+                  style: TextStyle(
+                    color: Colors.lightGreen,
+                    fontStyle: FontStyle.italic
+                  )
+                )
+              ]
+            )
+          )
         ),
       ),
     );
