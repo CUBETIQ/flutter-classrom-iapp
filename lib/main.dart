@@ -15,15 +15,17 @@ class MyApp extends StatelessWidget {
           alignment: Alignment.center,
           child: Padding(
             padding: EdgeInsets.all(20.0),
-            child: IconButton(
-              icon: Icon(Icons.verified_user), // source icon
-              iconSize: 50.0, // icon size for button
-              color: Colors.lightBlue, // button color
-              tooltip: 'Hi, Please click me!', // tooltip when hover on this button
-              disabledColor: Colors.grey, // button color when it's disabled
-              highlightColor: Colors.red, // highlight color when clicked and paused
-              splashColor: Colors.lightGreenAccent, // ripple color
+            child: RaisedButton(
               onPressed: () => {}, // do action
+              color: Colors.blue,
+              child: Row( // create a new row (horizontial)
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(Icons.verified_user, color: Colors.white,), // icon class
+                  SizedBox(width: 10,),
+                  Text("Verify User".toUpperCase(), style: TextStyle(color: Colors.white),) // text class
+                ],
+              ),
             )
           )
         ),
