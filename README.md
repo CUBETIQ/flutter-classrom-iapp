@@ -6,7 +6,7 @@ A new Flutter Classroom project.
 
 + Clone the repository
 
-    `# git clone https://github.com/CUBETIQ/flutter-classrom-iapp.git`
+    	`# git clone https://github.com/CUBETIQ/flutter-classroom-iapp.git`
 
 + Checkout the Chapters or Widgets by tag
 
