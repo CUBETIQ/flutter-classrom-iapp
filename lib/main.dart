@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,24 +13,32 @@ class MyApp extends StatelessWidget {
           title: const Text("iApp Work"),
         ),
         body: Container(
-          alignment: Alignment.center,
-          child: Padding(
-            padding: EdgeInsets.all(20.0),
-            child: RaisedButton(
-              onPressed: () => {}, // do action
-              color: Colors.blue,
-              child: Row( // create a new row (horizontial)
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Icon(Icons.verified_user, color: Colors.white,), // icon class
-                  SizedBox(width: 10,),
-                  Text("Verify User".toUpperCase(), style: TextStyle(color: Colors.white),) // text class
-                ],
-              ),
-            )
-          )
-        ),
+            alignment: Alignment.center,
+            child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: FlatButton(
+                  disabledColor: Colors.red,
+                  padding: EdgeInsets.all(15.0),
+                  splashColor: Colors.blueGrey,
+                  // color: Colors.blueAccent, // if you want to set background button
+                  onPressed: () => {}, // if you to disabled this button, set onPressed to null
+                  child: Text("Click me"),
+                )
+              )
+            ),
       ),
     );
   }
+
+  void _showDialog(BuildContext context) {
+    var alertDialog = AlertDialog(
+        title: Text("Confirmation"), content: Text("This is a content"));
+
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return alertDialog;
+        });
+  }
+
 }
