@@ -30,15 +30,4 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  void _showDialog(BuildContext context) {
-    var alertDialog = AlertDialog(
-        title: Text("Confirmation"), content: Text("This is a content"));
-
-    showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return alertDialog;
-        });
-  }
-
 }
