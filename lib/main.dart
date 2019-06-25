@@ -15,11 +15,18 @@ class MyApp extends StatelessWidget {
           alignment: Alignment.center,
           child: Padding(
             padding: EdgeInsets.all(20.0),
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: "Enter username"
+            child: RaisedButton(
+              onPressed: () => {}, // do action
+              color: Colors.blue,
+              child: Row( // create a new row (horizontial)
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(Icons.verified_user, color: Colors.white,), // icon class
+                  SizedBox(width: 10,),
+                  Text("Verify User".toUpperCase(), style: TextStyle(color: Colors.white),) // text class
+                ],
               ),
-            ),
+            )
           )
         ),
       ),
