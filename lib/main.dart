@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
                 padding: EdgeInsets.all(20.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    icon: Icon(Icons.account_circle),
-                    hintText: "Enter your username"
+                    prefixIcon: Icon(Icons.print),
+                    hintText: "Enter printer name"
                   ),
                 )
               )
