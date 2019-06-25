@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
                 padding: EdgeInsets.all(20.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.print),
+                    suffixIcon: Icon(Icons.print),
                     hintText: "Enter printer name"
                   ),
                 )
