@@ -20,15 +20,11 @@ class MyApp extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Card(
-                    child: Padding(
-                      padding: EdgeInsets.all(40.0),
-                      child: Row(
-                        children: <Widget>[
-                          Text("Hello, CUBETIQ")
-                        ],
-                      ),
-                    )
+                  GestureDetector(
+                    child: Text("Click me here",),
+                    onTap: () {
+                      // handle action
+                    },
                   )
                 ],
               )
