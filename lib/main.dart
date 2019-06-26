@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  int _val1 = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,17 +17,20 @@ class MyApp extends StatelessWidget {
             alignment: Alignment.center,
             child: Padding(
               padding: EdgeInsets.all(20.0),
-              child: Column(
+              child: Row(
                 children: <Widget>[
-                  Image.network(
-                    "https://www.cubetiqs.com/assets/images/LOGO-Black.png",
-                    color: Colors.green,
+                  Radio(
+                    value: 0,
+                    groupValue: _val1,
+                    onChanged: (int value) { this._val1 = value;},
                   ),
-                  SizedBox(height: 50.0,),
-                  Image.asset(
-                    "assets/images/logo.png",
-                    color: Colors.blueAccent,
-                  )
+                  Text("Ricky"),
+                  Radio(
+                    value: 1,
+                    groupValue: _val1,
+                    onChanged: (int value) { this._val1 = value;},
+                  ),
+                  Text("Tika")
                 ],
               )
             )),
