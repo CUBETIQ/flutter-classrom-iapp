@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(20.0),
               child: Image(
-                image: AssetImage("assets/images/logo.png"),
-                width: 50.0,
-                height: 50.0,
+                image: NetworkImage("https://www.cubetiqs.com/assets/images/LOGO-Black.png"),
+                width: 200.0,
+                height: 200.0,
               )
             )),
       ),
