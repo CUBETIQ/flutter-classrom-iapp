@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  int _val1 = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +18,11 @@ class MyApp extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               child: Row(
                 children: <Widget>[
-                  Checkbox(
-                    value: false,
-                    onChanged: (bool value) {},
-                  ),
-                  Text("Ricky"),
-                  Checkbox(
-                    value: true,
-                    onChanged: (bool value) {},
-                  ),
-                  Text("Tika"),
+                  InkWell(
+                    child: Text("Text with clickable"),
+                    onTap: () {},
+                    splashColor: Colors.lightBlueAccent,
+                  )
                 ],
               )
             )),
