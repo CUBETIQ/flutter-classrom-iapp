@@ -15,10 +15,18 @@ class MyApp extends StatelessWidget {
             alignment: Alignment.center,
             child: Padding(
               padding: EdgeInsets.all(20.0),
-              child: Image(
-                image: NetworkImage("https://www.cubetiqs.com/assets/images/LOGO-Black.png"),
-                width: 200.0,
-                height: 200.0,
+              child: Column(
+                children: <Widget>[
+                  Image.network(
+                    "https://www.cubetiqs.com/assets/images/LOGO-Black.png",
+                    color: Colors.green,
+                  ),
+                  SizedBox(height: 50.0,),
+                  Image.asset(
+                    "assets/images/logo.png",
+                    color: Colors.blueAccent,
+                  )
+                ],
               )
             )),
       ),
