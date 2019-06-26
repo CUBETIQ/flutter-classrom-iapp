@@ -19,18 +19,16 @@ class MyApp extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               child: Row(
                 children: <Widget>[
-                  Radio(
-                    value: 0,
-                    groupValue: _val1,
-                    onChanged: (int value) { this._val1 = value;},
+                  Checkbox(
+                    value: false,
+                    onChanged: (bool value) {},
                   ),
                   Text("Ricky"),
-                  Radio(
-                    value: 1,
-                    groupValue: _val1,
-                    onChanged: (int value) { this._val1 = value;},
+                  Checkbox(
+                    value: true,
+                    onChanged: (bool value) {},
                   ),
-                  Text("Tika")
+                  Text("Tika"),
                 ],
               )
             )),
